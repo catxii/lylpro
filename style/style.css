@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+body {margin:0; padding:0;  background:#fff; font-family:"Microsoft YaHei"; }
+input{  font-family: "Microsoft YaHei";}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0; margin:0;}   
+table,td,tr,th{font-size:12px;}
+li{list-style-type:none;}
+img{vertical-align:top;border:0;}
+ol,ul {list-style:none;}
+h1,h2,h3,h4,h5,h6 {font-size:12px; font-weight:normal;}
+address,cite,code,em,th {font-weight:normal; font-style:normal;}
+
+.left{float:left;}
+.right{float:right;}
+.clearfix:after { visibility:hidden; display:block; font-size:0; content:""; clear:both; height:0;}
+.clearfix{ *zoom:1;}
+.clear{ clear:both;}
+
+a { text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {}
+
+
+.tabshide .tabs {
+    display: none;
+}
+.tabshide .has-tabs{
+	bottom: 0px!important; 
+}
+
