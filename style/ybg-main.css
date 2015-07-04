@@ -1571,6 +1571,17 @@ dl.cp-a1 {
 .delete-ico {
   background: url(../images/lajitong-ico_03.png) no-repeat;
 }
+.icon-round-style {
+  border-radius: 200px;
+  border: 1px solid #ccc;
+  width: 30px;
+  height: 30px;
+  line-height: 28px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+}
 .box-bottom {
   height: 99px;
   background: rgba(0, 0, 0, 0.7);
@@ -1706,6 +1717,16 @@ dl.cp-a1 {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.option-address-area {
+  background-color: #ffffff;
+  padding: 15px 0px;
+  color: #484848;
+}
+.option-address-area .user-name {
+  color: #484848;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 .quan-ico {
   background: url(../images/tijiaodingdan_03.png) center left no-repeat;
   padding-left: 30px;
@@ -1786,4 +1807,110 @@ dl.cp-a1 {
 .no-address .button-balanced {
   vertical-align: middle;
   margin-left: 10px;
+}
+.position-right-bottom {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  z-index: 10;
+}
+.position-right-bottom.icon-bin {
+  color: #cccccc;
+  border: 1px solid #cccccc;
+}
+.position-right-bottom.icon-bin.activated {
+  color: #ed364d;
+  border: 1px solid #ed364d;
+}
+.font-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.address-list-edit {
+  margin-top: 15px;
+  background: #ffffff;
+}
+.address-list-edit .item-input {
+  margin: 0 10px;
+  border-style: none none solid none;
+}
+.address-list-edit .input-label {
+  max-width: 90px;
+  text-align: right;
+}
+.address-list-edit .button-light {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+.alert-area {
+  color: #fe8b0f;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  background: white;
+}
+.bar.bar-positive {
+  background: #009fe8;
+  border-color: #009fe8;
+  background-image: linear-gradient(0deg, #009fe8, #009fe8 50%, transparent 50%);
+}
+.tabs-positive > .tabs,
+.tabs.tabs-positive {
+  background: url(../images/tm-bg_03.png);
+  background-color: transparent!important;
+  border: none;
+  height: 60px;
+}
+.tabs-positive > .tabs .badge badge-assertive,
+.tabs.tabs-positive .badge badge-assertive {
+  background: #64f0f9;
+}
+.tabs-striped.tabs-positive .tab-item.activated,
+.tabs-striped.tabs-positive .tab-item.active,
+.tabs-striped.tabs-positive .tab-item.tab-item-active {
+  border: none;
+  margin-top: 0px;
+}
+.bar-footer.has-tabs,
+.has-tabs {
+  bottom: 0;
+}
+.scroll {
+  padding-bottom: 40px;
+}
+.tab-ico {
+  padding-top: 40px;
+  background-size: 30px!important;
+}
+.tab-ico.tab-mall-ico {
+  background: url(../images/tab-ico_mall.png) no-repeat center 7px;
+}
+.tab-ico.tab-mall-ico.tab-item-active {
+  background-position: center -74px;
+  color: #009fe8;
+}
+.tab-ico.tab-cart-ico {
+  background: url(../images/tab-ico_cart.png) no-repeat center 7px;
+}
+.tab-ico.tab-cart-ico.tab-item-active {
+  background-position: center -74px;
+  color: #009fe8;
+}
+.tab-ico.tab-order-ico {
+  background: url(../images/tab-ico_order.png) no-repeat center 7px;
+}
+.tab-ico.tab-order-ico.tab-item-active {
+  background-position: center -74px;
+  color: #009fe8;
+}
+.tab-ico.tab-profile-ico {
+  background: url(../images/tab-ico_profile.png) no-repeat center 7px;
+}
+.tab-ico.tab-profile-ico.tab-item-active {
+  background-position: center -74px;
+  color: #009fe8;
+}
+.index-banner img {
+  width: 100%;
 }

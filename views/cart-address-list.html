@@ -1,107 +1,51 @@
-<ion-view view-title="地址管理" class="gray-color-bg">
+<ion-view view-title="我的收货地址" class="gray-color-bg">
 	<ion-nav-buttons side="right">
-	  <a class="button  button-calm" href="#/tab/cart-submit-order">
+	  <a class="button  button-calm" href="#/tab/cart-address-add">
 	  	新增
 	  </a>
   	</ion-nav-buttons>
 	<ion-content scroll="true" scrollbar-y="false" has-bouncing="true">
-		
-	<div class="address-area">
-		<!-- 有地址时候的显示 -->
-		<div class="has-address">
-			<h4 class="user-name">黄小米<span class="float-right">18973291036</span></h4>
-			<ul class="address-info">
-				<li>长沙市-雨花区</li>
-				<li>万家丽路2345号万科金域华府3栋1104</li>
-			</ul>
-		</div>
-	</div>
 	
-	<div class="list" style="margin-top:20px;">
 
-	  <a class="item item-icon-right" href="#">
-	    支付方式
-	    <span class="badge " style="margin-right:5px;">微信支付</span>
-	    <i class="icon icon-chevron-right gray-color"></i>
-	  </a>
+	<ul class="list">
 
-	  <div class="item ">
-	    优惠劵
-	    <span class="badge red-color" style="margin-right:5px;top:7px;right:10px;"><span class="icon-diy quan-ico">满1000元减50元</span></span>
-	    <div class="quan-info"></div>
-	  </div>
+	  <li class="item item-checkbox">
+	     <label class="checkbox" style="right:initial;">
+	       <input type="checkbox" checked>
+	     </label>
+	     <a class="option-address-area" href="#/tab/cart-address-edit">
+		<!-- 有地址时候的显示 -->
+			<div class="has-address">
+				<h4 class="user-name">黄小米<span class="float-right">18973291036</span></h4>
+				<ul class="address-info small">
+					<li>长沙市-雨花区</li>
+					<li class="font-overflow" style="width:90%">万家丽路2345号万科金域华府3栋1104</li>
+				</ul>
+			</a>
+			<a class="position-right-bottom icon-round-style icon-bin" href='javascript:void(0)'></a>
+		 </div>
+	  </li>
 
-	</div>
+	  <li class="item item-checkbox">
+	     <label class="checkbox" style="right:initial;">
+	       <input type="checkbox" checked>
+	     </label>
+	     <a class="option-address-area" href="#/tab/cart-address-edit">
+		<!-- 有地址时候的显示 -->
+			<div class="has-address">
+				<h4 class="user-name">黄小米<span class="float-right">18973291036</span></h4>
+				<ul class="address-info small">
+					<li>长沙市-雨花区</li>
+					<li class="font-overflow" style="width:90%">万家丽路2345号万科金域华府3栋1104</li>
+				</ul>
+			</a>
+			<a class="position-right-bottom icon-round-style icon-bin" href='javascript:void(0)'></a>
+		 </div>
+	  </li>
 
-	<div class="list order-submit-list">
-	  <div class="order-background up"></div>
-	  <div class="item " href="#">
-	  	<h1 class="title">结算</h1>
-	  </div>
 
-	  <a class="item item-icon-right" href="#">
-	    商品清单
-	    <i class="icon icon-chevron-right arrow-down gray-color"></i>
-	  </a>
-	  <div class="order-buy-box">
-	  	<h1 class="orange-color">下单后尽快为您送达，预计12小时内送达</h1>
-	  	<div class="list">
-		    <a class="item item-avatar" href="#">
-		      <img src="images/ad1.jpg">
-		      <h2>印山台水泥</h2>
-		      <p>
-		      	<span class="red-color">￥169.0</span>  
-		      	<span>规格：25*3.5</span>
-		      	<span>数量：99包</span>
-		      </p>
-		    </a>
-		    <a class="item item-avatar" href="#">
-		      <img src="images/ad1.jpg">
-		      <h2>印山台水泥</h2>
-		      <p>
-		      	<span class="red-color">￥169.0</span>  
-		      	<span>规格：25*3.5</span>
-		      	<span>数量：99包</span>
-		      </p>
-		    </a>
-		    <a class="item item-avatar" href="#">
-		      <img src="images/ad1.jpg">
-		      <h2>印山台水泥</h2>
-		      <p>
-		      	<span class="red-color">￥169.0</span>  
-		      	<span>规格：25*3.5</span>
-		      	<span>数量：99包</span>
-		      </p>
-		    </a>
-		    <a class="item item-avatar" href="#">
-		      <img src="images/ad1.jpg">
-		      <h2>印山台水泥</h2>
-		      <p>
-		      	<span class="red-color">￥169.0</span>  
-		      	<span>规格：25*3.5</span>
-		      	<span>数量：99包</span>
-		      </p>
-		    </a>
-		</div>
-	  </div>
-
-	  <a class="item " href="#">
-	    商品总金额：
-	    <span class="badge badge-right black-color" style="margin-right:5px;">￥633.00</span>
-	  </a>
-
-	  <a class="item " href="#">
-	    优惠券：
-	    <span class="badge badge-right black-color" style="margin-right:5px;">-￥633.00</span>
-	  </a>
-
-	  <a class="item " href="#">
-	    应付总额：
-	    <span class="badge badge-right red-color" style="margin-right:5px;">￥633.00</span>
-	  </a>
-	  
-	  <div class="order-background down"></div>
-	</div>
+	</ul>
+	
 
 
 	</ion-content>

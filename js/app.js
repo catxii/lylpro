@@ -61,6 +61,37 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
         }
       }
     })
+    // 购物车-添加新地址
+    .state('tabs.cart-address-add', {
+      url: "/cart-address-add",
+      views: { 
+        'cart-tab': {
+          templateUrl: "views/cart-address-add.html",
+          controller: 'CartCtrl'
+        }
+      }
+    })
+    // 购物车-编辑地址
+    .state('tabs.cart-address-edit', {
+      url: "/cart-address-edit",
+      views: { 
+        'cart-tab': {
+          templateUrl: "views/cart-address-edit.html",
+          controller: 'CartCtrl'
+        }
+      }
+    })
+
+    // 购物车-编辑地址
+    .state('tabs.cart-payway-chose', {
+      url: "/cart-payway-chose",
+      views: { 
+        'cart-tab': {
+          templateUrl: "views/cart-payway-chose.html",
+          controller: 'CartCtrl'
+        }
+      }
+    })
     
     
     

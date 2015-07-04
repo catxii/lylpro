@@ -5,7 +5,7 @@
 	  </a>
   	</ion-nav-buttons>
 	<ion-content scroll="true" scrollbar-y="false" has-bouncing="true">
-		
+	<div class="index-banner"><a href="#"><img src="images/adad_17.jpg"></a></div>
 		<div class="boxmain">
 
 		      <!-- Swiper -->
@@ -24,7 +24,7 @@
 
 			    <div class="item item-thumbnail-left" ng-repeat="product in products ">
 			      <img src="{{product.imgsrc}}">
-			      <h2>{{product.name}}</h2>
+			      <h2 ng-bind="product.name"></h2>
 			      <p>规格：{{product.num}} <span class="float-right">单位：{{product.dw}}</span></p>
 			      <h4 class="price">￥55</h4>
 			      <ul class="clearfix count-ul">
