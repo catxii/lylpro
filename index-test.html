@@ -12,10 +12,20 @@
     <h1>Hello {{'World'}}!</h1>
     <h1>{{1+2}},{{obj.text}}，你好</h1>
     <ul>
-      <li ng-repeat="thing in things | filter:input_message ">
-          {{thing.name}}:{{thing.age}}
+      <li ng-repeat="thing in things  | filter:input_message">
+          {{thing.name}}:{{thing.age }}
       </li>
     </ul>
+    <ul>
+      <li ng-repeat="a in [{'name':'xiaosa1','age':'123'},{'name':'xiaosa2','age':'123'},{'name':'xiaosa3','age':'123'}] ">
+        {{a.name}}:{{a.age}}
+      </li>
+    </ul>
+
+    <ul>
+      <li></li>
+    </ul>
+  
   </div>
 	<!-- ionic/angularjs js -->
     <script type="text/javascript" src="js/angular.min.js"></script>

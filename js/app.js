@@ -5,8 +5,13 @@ iapp.run(['$rootScope',function($rootScope){
 	// 第一次启动需要做的配置
 	$rootScope.$on('$stateChangeSuccess', 
 		function(event, toState, toParams, fromState, fromParams){
-			console.log('hehhe...'+ toState.name);
-			$rootScope.hidetabs = (toState.name === 'tabs.cart-submit-order');
+			$rootScope.hidetabs = (
+				toState.name === 'tabs.cart-submit-order' 
+				|| toState.name === 'tabs.cart-address-list' 
+				|| toState.name === 'tabs.cart-address-edit'
+				|| toState.name === 'tabs.cart-address-add' 
+				|| toState.name === 'tabs.cart-payway-chose' 
+				);
 	});
 }]);
 
@@ -124,8 +129,7 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
 	$ionicConfigProvider.tabs.position('bottom');
 	// 设置标题位置
 	$ionicConfigProvider.navBar.alignTitle('center');
-	
-	console.log('mall');
+
 	// 默认跳转页
 	$urlRouterProvider.otherwise("/tab/mall");
 	
