@@ -1,14 +1,35 @@
+
 // 商城
-iapp.controller('ProductCtrl', ['$scope',function($scope) {
+iapp.controller('ProductCtrl', ['$scope','$http',function($scope, $http) {
+	
 	$http({
-		url:"http://ybgplatform.com/product/ajaxGoodsList",
+		url:"http://testwuhan.ybgplatform.com/product/ajaxBrandList",
 		method:"GET",
+		dataType: "json",
 		cache:true
 	}).success(function(data){
-		$scope.products = data;
+	    //console.log(data[i])  
+	    $scope.products = data;
+	    console.log("123"+products[0])
 	}).error(function(data){
 		alert("请求失败")
 	})
+
+	// $.ajax({
+ //        url:"http://testwuhan.ybgplatform.com/product/ajaxBrandList",
+ //        type:'GET',
+ //        dataType: "json",
+ //        success:function (data) {
+ //            for(var i=0;i < data.length;i++){
+	//             //console.log(data[i])  
+	//             $scope.products = [];
+	//             $scope.products.push(data[i])
+	//             console.log("123"+products[0])
+ //        	}
+ //        }        
+ 
+ //    });
+
 	// $scope.products = [
 	// 	{'imgsrc':'images/cp-img.jpg','name':'示范产品1','num':'12','dw':'包'},
 	// 	{'imgsrc':'images/cp-img.jpg','name':'示范产品2','num':'3','dw':'包'},
