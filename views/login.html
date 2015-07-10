@@ -10,6 +10,7 @@
     <label class="item item-input">
       <span class="input-label">用户名</span>
       <input type="text" placeholder="请输入用户名" ng-model="user.username">
+      token:<input name="token" value="{% csrf_token %}"/>
     </label>
     <label class="item item-input">
       <span class="input-label">密  码</span>
