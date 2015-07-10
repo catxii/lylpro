@@ -119,6 +119,12 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
           controller: 'ProfileCtrl'
         }
       }
+    })  
+    // 登陆
+    .state('login', {
+      url: "/login",
+      templateUrl: "views/login.html",
+      controller: 'LoginCtrl'
     });
     
     // 设置上一级菜单名字 
@@ -131,7 +137,7 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
 	$ionicConfigProvider.navBar.alignTitle('center');
 
 	// 默认跳转页
-	$urlRouterProvider.otherwise("/tab/mall");
+	$urlRouterProvider.otherwise("login");
 	
 	// 设置 http 请求头
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
