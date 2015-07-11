@@ -1,7 +1,41 @@
 var iapp = angular.module('iApp', ['ionic']);
 
 //启动项
-iapp.run(['$rootScope',function($rootScope){
+iapp.run(['$rootScope', '$state', 'APIService',function($rootScope, $state, APIService){
+  // 1.通过获取openid
+  APIService.getOpenId(function(data){
+    var openid = data.openid;
+
+    // 获取到openid 放入全局函数
+    $rootScope.openid = openid; 
+    
+    // 2.判断是否绑定过 放入该函数是为了避免异步调用函数不同不引起的不必要的错误
+    APIService.checkUserExist({open_id:openid},function(data) {
+      var flag = data.status;
+    
+      // 2.1.绑定未激活用户 跳转帮助页面
+      if (flag === 0) {
+        $state.go('', {})
+      }
+    
+      // 2.2.未绑定用户 跳转绑定页面
+      if (flag === -1) {
+        $state.go('', {})
+      }
+
+      // 2.3.已激活的用户跳转到商城页面
+      if (flag === 1) {
+        // 把返回的号码放入到全局方便我的选项卡调取个人信息等
+        $rootScope.mobile = data.msg; 
+        $state.go('', {});
+      }
+    });
+
+  });
+  
+  
+  
+
 	// 第一次启动需要做的配置
 	$rootScope.$on('$stateChangeSuccess', 
 		function(event, toState, toParams, fromState, fromParams){
@@ -119,6 +153,12 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
           controller: 'ProfileCtrl'
         }
       }
+    })  
+    // 登陆
+    .state('login', {
+      url: "/login",
+      templateUrl: "views/login.html",
+      controller: 'LoginCtrl'
     });
     
     // 设置上一级菜单名字 
@@ -131,7 +171,7 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
 	$ionicConfigProvider.navBar.alignTitle('center');
 
 	// 默认跳转页
-	$urlRouterProvider.otherwise("/tab/mall");
+	//$urlRouterProvider.otherwise("login");
 	
 	// 设置 http 请求头
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
