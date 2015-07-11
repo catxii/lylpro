@@ -1,51 +1,12 @@
 var iapp = angular.module('iApp', ['ionic']);
 
 //启动项
-iapp.run(['$rootScope', '$state', 'APIService',function($rootScope, $state, APIService){
-  // 1.通过获取openid
-  APIService.getOpenId(function(data){
-    var openid = data.openid;
-
-    // 获取到openid 放入全局函数
-    $rootScope.openid = openid; 
-    
-    // 2.判断是否绑定过 放入该函数是为了避免异步调用函数不同不引起的不必要的错误
-    APIService.checkUserExist({open_id:openid},function(data) {
-      var flag = data.status;
-    
-      // 2.1.绑定未激活用户 跳转帮助页面
-      if (flag === 0) {
-        $state.go('', {})
-      }
-    
-      // 2.2.未绑定用户 跳转绑定页面
-      if (flag === -1) {
-        $state.go('', {})
-      }
-
-      // 2.3.已激活的用户跳转到商城页面
-      if (flag === 1) {
-        // 把返回的号码放入到全局方便我的选项卡调取个人信息等
-        $rootScope.mobile = data.msg; 
-        $state.go('', {});
-      }
-    });
-
-  });
-  
-  
-  
-
+iapp.run(['$rootScope',function($rootScope){
 	// 第一次启动需要做的配置
 	$rootScope.$on('$stateChangeSuccess', 
 		function(event, toState, toParams, fromState, fromParams){
-			$rootScope.hidetabs = (
-				toState.name === 'tabs.cart-submit-order' 
-				|| toState.name === 'tabs.cart-address-list' 
-				|| toState.name === 'tabs.cart-address-edit'
-				|| toState.name === 'tabs.cart-address-add' 
-				|| toState.name === 'tabs.cart-payway-chose' 
-				);
+			console.log('hehhe...'+ toState.name);
+			$rootScope.hidetabs = (toState.name === 'tabs.cart-submit-order');
 	});
 }]);
 
@@ -100,37 +61,6 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
         }
       }
     })
-    // 购物车-添加新地址
-    .state('tabs.cart-address-add', {
-      url: "/cart-address-add",
-      views: { 
-        'cart-tab': {
-          templateUrl: "views/cart-address-add.html",
-          controller: 'CartCtrl'
-        }
-      }
-    })
-    // 购物车-编辑地址
-    .state('tabs.cart-address-edit', {
-      url: "/cart-address-edit",
-      views: { 
-        'cart-tab': {
-          templateUrl: "views/cart-address-edit.html",
-          controller: 'CartCtrl'
-        }
-      }
-    })
-
-    // 购物车-编辑地址
-    .state('tabs.cart-payway-chose', {
-      url: "/cart-payway-chose",
-      views: { 
-        'cart-tab': {
-          templateUrl: "views/cart-payway-chose.html",
-          controller: 'CartCtrl'
-        }
-      }
-    })
     
     
     
@@ -153,12 +83,6 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
           controller: 'ProfileCtrl'
         }
       }
-    })  
-    // 登陆
-    .state('login', {
-      url: "/login",
-      templateUrl: "views/login.html",
-      controller: 'LoginCtrl'
     });
     
     // 设置上一级菜单名字 
@@ -169,9 +93,10 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
 	$ionicConfigProvider.tabs.position('bottom');
 	// 设置标题位置
 	$ionicConfigProvider.navBar.alignTitle('center');
-
+	
+	console.log('mall');
 	// 默认跳转页
-	//$urlRouterProvider.otherwise("login");
+	$urlRouterProvider.otherwise("/tab/mall");
 	
 	// 设置 http 请求头
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';

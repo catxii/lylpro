@@ -1654,18 +1654,6 @@ dl.cp-a1{
 .delete-ico {
  background: url(../images/lajitong-ico_03.png) no-repeat; 
 }
-.icon-round-style {
-  border-radius: 200px;
-  border:1px solid #ccc;
-  width:30px;
-  height: 30px;
-  line-height: 28px;
-  display: inline-block;
-  text-align: center;
-  font-size: 16px;
-  font-weight: normal;
-}
-
 
 // 透明底部区域
 .box-bottom{
@@ -1739,7 +1727,6 @@ dl.cp-a1{
 @yellow:#f6d125; //黄色
 @green:#62da84; //绿色
 @blue:#64f0f9; //湖蓝
-@darkblue:#009fe8;//深蓝
 @cyan:#88f7d6; //青色
 @white:#fff; //白色
 @gray:#ccc; //灰色
@@ -1833,17 +1820,6 @@ dl.cp-a1{
     margin-bottom: 10px;
   }
 }
-
-.option-address-area {
-  background-color: @white;
-  padding: 15px 0px;
-  color: @black;
-  .user-name {
-    color: @black;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-}
 .quan-ico {
   background:url(../images/tijiaodingdan_03.png) center left no-repeat;
   padding-left: 30px;
@@ -1932,125 +1908,5 @@ dl.cp-a1{
   .button-balanced {
     vertical-align: middle;
     margin-left:10px;
-  }
-  
-}
-
-.position-right-bottom {
-  position: absolute;
-  right:15px;
-  bottom:20px;
-  z-index: 10;
-  &.icon-bin {
-    color: @gray;
-    border:1px solid @gray;
-    &.activated {
-      color: @red;
-      border:1px solid @red;
-    }
-  }
-}
-
-.font-overflow {
-   overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.address-list-edit {
-  margin-top: 15px;
-  background: @white;
-  .item-input {
-    margin:0 10px;
-    border-style:none none solid none;
-  }
-  .input-label {
-    max-width: 90px;
-    text-align: right;
-  }
-  .button-light {
-    border:1px solid @gray;
-    border-radius: 10px;
-  }
-}
-
-.alert-area {
-  .orange-color;
-  text-align: center;
-  line-height: 30px;
-  font-size:12px;
-  background:white;
-}
-
-// 重置ionic的基础样式
-.bar.bar-positive {
-  background: @darkblue;
-  border-color: @darkblue;
-  background-image: linear-gradient(0deg,@darkblue,@darkblue 50%,transparent 50%);
-}
-.tabs-positive>.tabs, .tabs.tabs-positive{
-  background: url(../images/tm-bg_03.png);
-  background-color: transparent!important;
-  border:none;
-  height: 60px;
-  .badge badge-assertive {
-    background: @blue;
-  }
-}
-.tabs-striped.tabs-positive .tab-item.activated, .tabs-striped.tabs-positive .tab-item.active, .tabs-striped.tabs-positive .tab-item.tab-item-active {
-  border:none;
-  margin-top: 0px;
-}
-.bar-footer.has-tabs, .has-tabs {
-  bottom: 0;
-}
-.scroll {
-  padding-bottom: 40px;
-}
-
-// tab样式
-.tab-ico{
-  padding-top: 40px;
-  background-size: 30px!important;
-  &.tab-mall-ico {
-    background: url(../images/tab-ico_mall.png) no-repeat center 7px;
-    &.tab-item-active {
-      background-position: center -74px;
-      color: @darkblue;
-    }
-  }
-  &.tab-cart-ico {
-    background: url(../images/tab-ico_cart.png) no-repeat center 7px;
-    &.tab-item-active {
-      background-position: center -74px;
-      color: @darkblue;
-    }
-  }
-  &.tab-order-ico {
-    background: url(../images/tab-ico_order.png) no-repeat center 7px;
-    &.tab-item-active {
-      background-position: center -74px;
-      color: @darkblue;
-    }
-  }
-  &.tab-profile-ico {
-    background: url(../images/tab-ico_profile.png) no-repeat center 7px;
-    &.tab-item-active {
-      background-position: center -74px;
-      color: @darkblue;
-    }
-  }
-}
-
-.index-banner {
-  img {
-    width: 100%;  
-  }
-}
-
-.logo-img {
-  .logo {
-    background:#fff url(../images/logo.png) center no-repeat;
-    height: 350px; 
   }
 }
