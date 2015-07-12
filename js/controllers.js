@@ -1,19 +1,11 @@
 
 // 商城
-iapp.controller('ProductCtrl', ['$scope','$http',function($scope, $http) {
-	
-	$http({
-		url:"http://testwuhan.ybgplatform.com/product/ajaxBrandList",
-		method:"GET",
-		dataType: "json",
-		cache:true
-	}).success(function(data){
-	    //console.log(data[i])  
-	    $scope.products = data;
-	    console.log("123"+products[0])
-	}).error(function(data){
-		alert("请求失败")
-	})
+iapp.controller('ProductCtrl', ['$scope','APIService',function($scope, APIService) {
+	var products = [];
+	APIService.mallproductsInfo(function(data){
+		$scope.products = data.aaData;
+	});
+
 }]);
 
 // 个人中心 
@@ -21,7 +13,11 @@ iapp.controller('ProfileCtrl', ['$scope',function($scope) {
 }]);
 
 // 购物车
-iapp.controller('CartCtrl', ['$scope',function($scope) {
+iapp.controller('CartCtrl', ['$scope','APIService',function($scope, APIService) {
+	var products = [];
+	APIService.mallproductsInfo(function(data){
+		$scope.products = data.aaData;
+	});
 }]);
 
 // 订单

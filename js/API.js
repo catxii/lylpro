@@ -51,7 +51,7 @@ iapp.factory('APIService',['$http',function($http){
 	}
 
 	// 获取地理位置信息
-	var getLocalSite = function(success, error)) {
+	var getLocalSite = function(success, error) {
 		ajax({
 			url:prefix + '/wechat/ajaxGetLocalSite',
 			data:{},
@@ -83,23 +83,43 @@ iapp.factory('APIService',['$http',function($http){
 		});
 	}
 
+    // 商品接口
+	var mallproductsInfo = function( success, error) {
+		// 参数包含 openid
+		ajax({
+			url:'json/ajaxgoogdList.json',
+			data:{},
+			success:success,
+			error:error
+		});
+	}
+
 
 	
 	return {
 		login: function(data, success, error) {
-			login(data, success, error);
+//			login(data, success, error);
 		},
 		getOpenId: function(success, error) {
-			getOpenId(success, error);
+//			getOpenId(success, error);
 		},
 		getLocalSite: function(success, error) {
-			getLocalSite(success, error);
+//			getLocalSite(success, error);
 		},
 		checkUserExist: function(data, success, error) {
-			checkUserExist(data, success, error);
+//			checkUserExist(data, success, error);
 		},
 		registerBind: function(data, success, error) {
-			registerBind(data, success, error);
+//			registerBind(data, success, error);
+		},
+		mallproductsInfo: function(success, error) {
+			mallproductsInfo( success, error);
 		}
 	}
+	
+	//商城
+	
+	
+	
+	
 }]);

@@ -23,13 +23,13 @@
 			<div class="list cp-img-list">
 
 			    <div class="item item-thumbnail-left" ng-repeat="product in products " >
-			      <img ng-src="{{product.image}}">
-			      <h2 ng-bind="product.name "></h2>
-			      <!-- <p>规格：{{product.num}} <span class="float-right">单位：{{product.dw}}</span></p> -->
-			      <h4 class="price">￥55{{product.image }}</h4>
+			      <img src="images/cp-img.jpg">
+			      <h2 ng-bind="product[1]"></h2>
+			       <p>规格：{{product[4]}} <span class="float-right">单位：{{product[9]}}</span></p> 
+			      <h4 class="price" ng-bind="product[8]"></h4>
 			      <ul class="clearfix count-ul">
-		              <li class="minus" >-</li>
-		              <li class="count"><input type="tel" value="0" class="input-noborder"></li>
+		              <li class="minus">-</li>
+		              <li class="count"><input type="tel" value="{{$eval()}}" class="input-noborder" ng-model="exp"></li>
 		              <li class="plus">+</li>
 		          </ul>
 			    </div>
