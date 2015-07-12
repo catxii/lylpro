@@ -37,20 +37,24 @@ iapp.controller('LoginCtrl', ['$scope', 'APIService', '$state',function($scope, 
 	// 登陆
 	$scope.signIn = function() {
 		
-		var user = $scope.user;
+	// 	var user = $scope.user;
 		
-		// 判断用户名密码是否为空
-		if (!user.username || !user.password) {
-			// toast 
-			alert('用户名密码不能为空！');
-			return;
-		}
-		// 登陆
-		APIService.login(user,function(data) {
-			alert('登陆成功');
-			$state.go('tabs.mall', {});
-		}, function() {
+	// 	// 判断用户名密码是否为空
+	// 	if (!user.username || !user.password) {
+	// 		// toast 
+	// 		alert('用户名密码不能为空！');
+	// 		return;
+	// 	}
+	// 	// 登陆
+	// 	APIService.login(user,function(data) {
+	// 		alert('登陆成功');
+	// 		$state.go('tabs.mall', {});
+	// 	}, function() {
 			
-		});
+	// 	});
+		$state.go('tabs.mall', {});
 	}
+
+	
+
 }]);
