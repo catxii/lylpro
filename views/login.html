@@ -1,7 +1,5 @@
 <ion-view view-title="登录" hide-nav-bar='true'>
 
-	 
-
 <ion-content>
 	
 	<div class="logo-img">
@@ -12,6 +10,7 @@
     <label class="item item-input">
       <span class="input-label">用户名</span>
       <input type="text" placeholder="请输入用户名" ng-model="user.username">
+      token:<input name="token" value="{% csrf_token %}"/>
     </label>
     <label class="item item-input">
       <span class="input-label">密  码</span>
@@ -22,7 +21,7 @@
     <button class="button button-block button-balanced" ng-click="signIn()">
       立即登录 
     </button >
-     <a class="button button-block button-energized button-register-style" href="#/register">新用户注册 <i class="ion-chevron-right"></i>
+     <a class="button button-block button-energized button-register-style" href="#/register" style="position:absolute; right:10px; top:0;">新用户注册 <i class="ion-chevron-right"></i>
   </a>
   </div>
    
