@@ -171,7 +171,7 @@ iapp.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', '$h
 	$ionicConfigProvider.navBar.alignTitle('center');
 
 	// 默认跳转页
-	//$urlRouterProvider.otherwise("login");
+	$urlRouterProvider.otherwise("login");
 	
 	// 设置 http 请求头
 	$httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
