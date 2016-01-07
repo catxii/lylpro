@@ -5,7 +5,6 @@ iapp.controller('ProductCtrl', ['$scope','APIService',function($scope, APIServic
 	APIService.mallproductsInfo(function(data){
 		$scope.products = data.aaData;
 	});
-
 }]);
 
 // 个人中心 
